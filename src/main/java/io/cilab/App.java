@@ -19,7 +19,6 @@ public class App {
     }
 
     public static void main(String[] args) throws IOException {
-        if (true) { System.err.println("INJECTED CRASH"); System.exit(1); }
         int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
         Path versionFile = Path.of(System.getenv().getOrDefault("VERSION_FILE", "VERSION"));
 
