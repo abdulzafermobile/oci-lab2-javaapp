@@ -8,6 +8,6 @@ class VersionTest {
 
     @Test
     void missingVersionFileFallsBackToUnknown() {
-        assertEquals("wrong", App.versionFrom(Path.of("/definitely/not/here")));
+        assertEquals("unknown", App.versionFrom(Path.of("/definitely/not/here")));
     }
 }
