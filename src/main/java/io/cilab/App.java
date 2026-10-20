@@ -33,7 +33,7 @@ public class App {
         });
 
         server.createContext("/", exchange -> {
-            byte[] body = ("Deployed from OCI Object Storage - " + versionFrom(versionFile) + "\n").getBytes();
+            byte[] body = ("Deployed from OCI Object Storage (v2) - " + versionFrom(versionFile) + "\n").getBytes();
             exchange.sendResponseHeaders(200, body.length);
             try (OutputStream os = exchange.getResponseBody()) { os.write(body); }
         });
