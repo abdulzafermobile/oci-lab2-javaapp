@@ -73,7 +73,7 @@ pipeline {
           withCredentials([string(credentialsId: 'oci-par-download', variable: 'PAR_URL')]) {
             sh '''
               set -eu
-              VER="$DEPLOY_VERSION"
+              VER="${DEPLOY_VERSION:-latest}"
               if [ "$VER" = "latest" ]; then VER="$BUILD_NUMBER"; fi
               echo "Deploying artifact version $VER"
 
